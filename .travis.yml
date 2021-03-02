@@ -8,11 +8,11 @@ script:
 before_deploy:
   - echo "${DOCKER_PASSWORD}" | docker login --username "${DOCKER_USERNAME}" --password-stdin
 deploy:
-  provider:script
+  provider: script
   script:
       docker push broken168/mysql-rest-with-sprin-boot-udemy;
       docker push broken168/rest-with-sprin-boot-udemy;
-      on:
-        branch: master
+  on:
+    branch: master
 notifications:
   email: false
