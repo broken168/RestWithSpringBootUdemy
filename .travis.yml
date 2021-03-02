@@ -13,6 +13,6 @@ deploy:
       docker push broken168/mysql-rest-with-sprin-boot-udemy;
       docker push broken168/rest-with-sprin-boot-udemy;
   on:
-    branch: master
+    branch: main
 notifications:
   email: false
